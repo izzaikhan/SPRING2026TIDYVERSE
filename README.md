@@ -206,8 +206,15 @@ Revision/Addition Description and Link:
 
 # Meiqi N
 Initial Description and Link:
-
-Revision/Addition Description and Link:
+**Title:** Analyzing Medical Insurance Costs based on smoking 
+**Author:** Mei Qi Ng
+**Dataset:** [Medical Insurance Cost Dataset (Kaggle)](https://www.kaggle.com/datasets/mosapabdelghany/medical-insurance-cost-dataset)
+**TidyVerse Packages & Functions Used:** 
+  *`readr`: `read_csv()`
+  * `dplyr`: `mutate()`, `case_when()`, `group_by()`, `summarise()`, `arrange()`
+  * `ggplot2`: `ggplot()`, `geom_point()`, `scale_color_manual()`
+**Description:** This vignette demonstrates how to import raw healthcare data and engineer new categorical features (BMI) to analyze cost drivers. Using dplyr to manipulate the data and then with ggplot2 to generate a scatter plot, we can visualize the compounding financial penalty of smoking and higher body mass index.
+**Link to Vignette:** [Medical_Costs_Vignette.Rmd](Medical_Costs_Vignette.Rmd) 
 
 # Michael M
 Initial Description and Link:
