@@ -1,3 +1,7 @@
+# SPRING2026TIDYVERSE
+Long Lin: Global Grocery Inflation analysis using dplyr and ggplot2.
+Extended by Kristoff Oliphant: Analyzed breakfast staples (Bread/Eggs) using stringr and forcats
+=======
 #This was created for the TidyVerse CREATE assignment for DATA 607. 
 
 #The goal of this assignment was to create a vignette that could be used by our fellow cohort members. For my vignette, I chose dplyr (because of how useful it is!)
