@@ -1,0 +1,77 @@
+---
+title: "TidyVerse"
+author: "Izza Khan"
+format: html
+---
+
+# Introduction
+
+This vignette demonstrates how to use TidyVerse packages such as dplyr and ggplot2 to clean, analyze, and visualize a Netflix dataset. The goal is to explore which countries produce the most Netflix content and identify trends in movie versus TV show releases.
+
+```{r}
+library(tidyverse)
+```
+
+
+```{r}
+data("mpg")
+
+cars_data <- mpg
+```
+
+# View Data
+
+```{r}
+glimpse(cars_data)
+```
+# Clean Data
+
+```{r}
+cars_clean <- cars_data %>%
+  drop_na()
+```
+
+# Count Cars by Manufacturer
+
+```{r}
+manufacturer_count <- cars_clean %>%
+  count(manufacturer, sort = TRUE)
+
+manufacturer_count
+```
+
+# Visualization
+
+```{r}
+ggplot(manufacturer_count, aes(x = reorder(manufacturer, n), y = n)) +
+  geom_col() +
+  coord_flip() +
+  labs(
+    title = "Number of Cars by Manufacturer",
+    x = "Manufacturer",
+    y = "Count"
+  )
+```
+
+# Compare Drive Types
+
+```{r}
+drive_count <- cars_clean %>%
+  count(drv)
+
+drive_count
+```
+
+```{r}
+ggplot(drive_count, aes(x = drv, y = n, fill = drv)) +
+  geom_col() +
+  labs(
+    title = "Drive Type Comparison",
+    x = "Drive Type",
+    y = "Count"
+  )
+```
+
+# Conclusion
+
+This example demonstrated how TidyVerse packages can be used to clean, organize, and visualize data. Using the mpg dataset, we explored car manufacturers and drive types through simple analysis and graphs.
